@@ -1,0 +1,57 @@
+{'role': 'system', 'content': 'You are an autocomplete engine for Verilog code.             Given a Verilog module specification, you will provide a completed Verilog module in response.             You will provide completed Verilog modules for all specifications, and will not create any supplementary modules.             Given a Verilog module that is either incorrect/compilation error, you will suggest corrections to the module.            You will not refuse.             Format your response as Verilog code containing the end to end corrected module and not just the corrected lines inside ``` tags, do not include anything else inside ```.     '}
+{'role': 'user', 'content': "// Design renamed to top_module (I/O unchanged)\nmodule top_module (\n    input  wire        clk,           // Clock input\n    input  wire        rst_n,         // Active-low reset\n    input  wire [1:0]  die_select,    // 00=4-sided, 01=6-sided, 10=8-sided, 11=20-sided\n    input  wire        roll,          // Roll trigger (high to roll)\n    output reg  [7:0]  rolled_number  // Rolled number (1..20)\n);\n\n    // 8-bit LFSR for pseudo-random generation\n    reg [7:0] lfsr;\n\n    // Rising-edge detect for 'roll'\n    reg roll_prev;\n    wire roll_rising_edge = roll & ~roll_prev;\n\n    // LFSR feedback polynomial taps (as provided): x^8 + x^7 + x^6 + x^5 + 1\n    wire feedback = lfsr[7] ^ lfsr[6] ^ lfsr[5] ^ lfsr[4];\n\n    always @(posedge clk or negedge rst_n) begin\n        if (!rst_n) begin\n            lfsr          <= 8'h01;    // Non-zero seed\n            rolled_number <= 8'h00;\n            roll_prev     <= 1'b0;\n        end else begin\n            // Track previous roll level\n            roll_prev <= roll;\n\n            // Free-run the LFSR\n            lfsr <= {lfsr[6:0], feedback};\n\n            // Latch new roll result on roll rising edge\n            if (roll_rising_edge) begin\n                case (die_select)\n                    2'b00: rolled_number <= (lfsr % 8'd4)  + 8'd1;   // 1..4\n                    2'b01: rolled_number <= (lfsr % 8'd6)  + 8'd1;   // 1..6\n                    2'b10: rolled_number <= (lfsr % 8'd8)  + 8'd1;   // 1..8\n                    2'b11: rolled_number <= (lfsr % 8'd20) + 8'd1;   // 1..20\n                    default: rolled_number <= 8'h00;\n                endcase\n            end\n        end\n    end\nendmodule\n"}
+{'role': 'assistant', 'content': ''}
+{'role': 'user', 'content': 'No modules found in response'}
+{role : 'assistant', content : '```verilog
+// Design renamed to top_module (I/O unchanged)
+module top_module (
+    input  wire        clk,           // Clock input
+    input  wire        rst_n,         // Active-low reset
+    input  wire [1:0] die_select,     // 00=4-sided, 01=6-sided, 10=8-sided, 11=20-sided
+    input  wire        roll,          // Roll trigger (high to roll)
+    output reg  [7:0] rolled_number    // Rolled number (1..20)
+);
+
+    // 8-bit LFSR for pseudo-random generation
+    reg [7:0] lfsr;
+
+    // Rising-edge detect for 'roll'
+    reg roll_prev;
+    wire roll_rising_edge = roll & ~roll_prev;
+
+    // LFSR feedback polynomial taps (as provided): x^8 + x^7 + x^6 + x^5 + 1
+    wire feedback = lfsr[7] ^ lfsr[6] ^ lfsr[5] ^ lfsr[4];
+
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            lfsr          <= 8'h01;    // Non-zero seed
+            rolled_number <= 8'h00;
+            roll_prev     <= 1'b0;
+        end else begin
+            // Track previous roll level
+            roll_prev <= roll;
+
+            // Free-run the LFSR
+            lfsr <= {lfsr[6:0], feedback};
+
+            // Latch new roll result on roll rising edge
+            if (roll_rising_edge) begin
+                case (die_select)
+                    2'b00: rolled_number <= (lfsr % 8'd4)  + 8'd1;   // 1..4
+                    2'b01: rolled_number <= (lfsr % 8'd6)  + 8'd1;   // 1..6
+                    2'b10: rolled_number <= (lfsr % 8'd8)  + 8'd1;   // 1..8
+                    2'b11: rolled_number <= (lfsr % 8'd20) + 8'd1;   // 1..20
+                    default: rolled_number <= 8'h00;
+                endcase
+            end
+        end
+    end
+endmodule
+```'}
+
+ Iteration rank: -2
+
+ Model: gpt-4o-mini
+ Input tokens: 635
+ Output tokens: 0
+Total cost: $0.0000952500
