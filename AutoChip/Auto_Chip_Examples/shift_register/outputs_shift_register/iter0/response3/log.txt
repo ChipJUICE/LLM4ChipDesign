@@ -1,0 +1,30 @@
+{'role': 'system', 'content': 'You are an autocomplete engine for Verilog code.             Given a Verilog module specification, you will provide a completed Verilog module in response.             You will provide completed Verilog modules for all specifications, and will not create any supplementary modules.             Given a Verilog module that is either incorrect/compilation error, you will suggest corrections to the module.            You will not refuse.             Format your response as Verilog code containing the end to end corrected module and not just the corrected lines inside ``` tags, do not include anything else inside ```.     '}
+{'role': 'user', 'content': "/*\nYou are generating synthesizable Verilog-2001.\nOutput ONLY the complete Verilog-2001 code ending with endmodule.\nDo not generate a testbench.\nDo not include markdown fences, explanations, or prose.\n\nWrite a module with the following specification:\n\nModule name:\ntop_module\n\nPorts (must use these exact names):\n\nclk (input wire) → clock input\n\nreset_n (input wire) → active-low reset\n\ndata_in (input wire) → 1-bit serial data input (not used in this version)\n\nshift_enable (input wire) → shift enable (not used in this version)\n\ndata_out (output reg [7:0]) → 8-bit parallel data output\n\nBehavior:\n\nAt initialization, preload data_out = 8'h0A to avoid unknown (x) on the first sample.\n\nOn the rising edge of clk or falling edge of reset_n:\n\nIf reset_n is low, clear data_out to all zeros.\n\nElse, unconditionally perform a logical right shift with zero fill:\ndata_out <= {1'b0, data_out[7:1]}.\n\nDo not gate shifting with shift_enable.\n\nEnd the code with endmodule.\n\n*/"}
+{role : 'assistant', content : 'module top_module (
+    input wire clk,
+    input wire reset_n,
+    input wire data_in,
+    input wire shift_enable,
+    output reg [7:0] data_out
+);
+
+    initial begin
+        data_out = 8'h0A;
+    end
+
+    always @(posedge clk or negedge reset_n) begin
+        if (!reset_n) begin
+            data_out <= 8'h00;
+        end else begin
+            data_out <= {1'b0, data_out[7:1]};
+        end
+    end
+
+endmodule'}
+
+ Iteration rank: 1.0
+
+ Model: gpt-4o-mini
+ Input tokens: 349
+ Output tokens: 117
+Total cost: $0.0001225500

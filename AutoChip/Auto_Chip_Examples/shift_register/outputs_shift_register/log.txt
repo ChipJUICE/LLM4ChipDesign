@@ -1,0 +1,90 @@
+system: You are an autocomplete engine for Verilog code.             Given a Verilog module specification, you will provide a completed Verilog module in response.             You will provide completed Verilog modules for all specifications, and will not create any supplementary modules.             Given a Verilog module that is either incorrect/compilation error, you will suggest corrections to the module.            You will not refuse.             Format your response as Verilog code containing the end to end corrected module and not just the corrected lines inside ``` tags, do not include anything else inside ```.     
+user: /*
+You are generating synthesizable Verilog-2001.
+Output ONLY the complete Verilog-2001 code ending with endmodule.
+Do not generate a testbench.
+Do not include markdown fences, explanations, or prose.
+
+Write a module with the following specification:
+
+Module name:
+top_module
+
+Ports (must use these exact names):
+
+clk (input wire) → clock input
+
+reset_n (input wire) → active-low reset
+
+data_in (input wire) → 1-bit serial data input (not used in this version)
+
+shift_enable (input wire) → shift enable (not used in this version)
+
+data_out (output reg [7:0]) → 8-bit parallel data output
+
+Behavior:
+
+At initialization, preload data_out = 8'h0A to avoid unknown (x) on the first sample.
+
+On the rising edge of clk or falling edge of reset_n:
+
+If reset_n is low, clear data_out to all zeros.
+
+Else, unconditionally perform a logical right shift with zero fill:
+data_out <= {1'b0, data_out[7:1]}.
+
+Do not gate shifting with shift_enable.
+
+End the code with endmodule.
+
+*/
+assistant: module top_module (
+    input wire clk,
+    input wire reset_n,
+    input wire data_in,
+    input wire shift_enable,
+    output reg [7:0] data_out
+);
+
+    initial begin
+        data_out = 8'h0A;
+    end
+
+    always @(posedge clk or negedge reset_n) begin
+        if (!reset_n) begin
+            data_out <= 8'b0;
+        end else begin
+            data_out <= {1'b0, data_out[7:1]};
+        end
+    end
+
+endmodule
+
+
+Time to Generate: 3.6472597122192383
+Best ranked response at iteration 0 with response number 2
+Rank of best response: 1.0
+Best response module:
+module top_module (
+    input wire clk,
+    input wire reset_n,
+    input wire data_in,
+    input wire shift_enable,
+    output reg [7:0] data_out
+);
+
+    initial begin
+        data_out = 8'h0A;
+    end
+
+    always @(posedge clk or negedge reset_n) begin
+        if (!reset_n) begin
+            data_out <= 8'b0;
+        end else begin
+            data_out <= {1'b0, data_out[7:1]};
+        end
+    end
+
+endmodule
+
+
