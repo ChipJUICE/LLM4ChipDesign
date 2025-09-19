@@ -1,0 +1,49 @@
+{'role': 'system', 'content': 'You are an autocomplete engine for Verilog code.             Given a Verilog module specification, you will provide a completed Verilog module in response.             You will provide completed Verilog modules for all specifications, and will not create any supplementary modules.             Given a Verilog module that is either incorrect/compilation error, you will suggest corrections to the module.            You will not refuse.             Format your response as Verilog code containing the end to end corrected module and not just the corrected lines inside ``` tags, do not include anything else inside ```.     '}
+{'role': 'user', 'content': "/*\nYou are generating synthesizable Verilog-2001.\nOutput ONLY one code block with NO markdown fences, NO prose, and nothing outside the module.\n\nWrite a single Verilog-2001 module with the following exact header:\n\nmodule top_module #(\n    parameter DEN = 16,\n    parameter RATE_NUM = 3,\n    parameter BURST_MAX = 8,\n    parameter TOKEN_COST = DEN\n) (\n    input  wire clk,\n    input  wire rst_n,   // active-low\n    input  wire req_i,   // request input\n    output wire grant_o, // 1-cycle grant pulse\n    output wire ready_o  // combinational readiness\n);\n\nSTRICT CODING RULES (to avoid Icarus warnings and ensure TB matching):\n- Pure Verilog-2001 only. Do NOT use any SystemVerilog features (no 'logic', no 'always_ff', no 'typedef', etc.).\n- Do NOT use inline initializations in declarations anywhere (e.g., 'reg x = 0;' is forbidden).\n- Do NOT declare variables inside procedural blocks. Declare all regs/wires at module scope.\n- Use a single sequential block: 'always @(posedge clk)' with nonblocking (<=) assignments only.\n- No 'initial' blocks, no delays (#), no $display/$finish, no latches.\n- Treat all token-related math as 32-bit wide signals.\n\nFUNCTIONAL REQUIREMENTS (must match the reference testbench semantics exactly):\n1) State:\n   - Declare 'reg [31:0] tokens;' to hold the token count.\n   - Declare 'reg grant_q;' to register the 1-cycle grant pulse.\n   - Declare 'localparam [31:0] MAX_TOKENS = BURST_MAX * DEN;'.\n\n2) Combinational intermediates (module-scope wires with continuous assigns, NOT inside always):\n   - 'wire [31:0] tokens_added;'\n   - 'wire [31:0] tokens_sat;'\n   - 'assign tokens_added = tokens + RATE_NUM;'\n   - 'assign tokens_sat   = (tokens_added > MAX_TOKENS) ? MAX_TOKENS : tokens_added;'\n\n3) Outputs (must use POST-ADD value):\n   - 'assign ready_o = (tokens_sat >= TOKEN_COST);'  // purely combinational\n   - 'assign grant_o = grant_q;'                      // registered 1-cycle pulse\n\n4) Reset behavior (bucket starts FULL):\n   - In 'always @(posedge clk)': if (!rst_n) begin\n       tokens  <= MAX_TOKENS;\n       grant_q <= 1'b0;\n     end else begin\n       // see update rules below\n     end\n\n5) Per-cycle update (POST-ADD semantics):\n   - Base all decisions on 'tokens_sat' (the POST-ADD saturated value), NOT on 'tokens'.\n   - If (req_i && (tokens_sat >= TOKEN_COST)) begin\n       grant_q <= 1'b1;              // assert grant for exactly this cycle\n       tokens  <= tokens_sat - TOKEN_COST;  // consume after add+saturate\n     end else begin\n       grant_q <= 1'b0;              // MUST clear every non-grant cycle\n       tokens  <= tokens_sat;        // refill/saturate without consuming\n     end\n\nProvide the complete module implementation beginning with the header above and ending with 'endmodule'. \nReturn ONLY the single code block of the module, nothing else.\n*/"}
+{role : 'assistant', content : 'module top_module #(
+    parameter DEN = 16,
+    parameter RATE_NUM = 3,
+    parameter BURST_MAX = 8,
+    parameter TOKEN_COST = DEN
+) (
+    input  wire clk,
+    input  wire rst_n,   // active-low
+    input  wire req_i,   // request input
+    output wire grant_o, // 1-cycle grant pulse
+    output wire ready_o  // combinational readiness
+);
+
+reg [31:0] tokens;
+reg grant_q;
+localparam [31:0] MAX_TOKENS = BURST_MAX * DEN;
+
+wire [31:0] tokens_added;
+wire [31:0] tokens_sat;
+assign tokens_added = tokens + RATE_NUM;
+assign tokens_sat   = (tokens_added > MAX_TOKENS) ? MAX_TOKENS : tokens_added;
+assign ready_o = (tokens_sat >= TOKEN_COST);
+assign grant_o = grant_q;
+
+always @(posedge clk) begin
+    if (!rst_n) begin
+        tokens  <= MAX_TOKENS;
+        grant_q <= 1'b0;
+    end else begin
+        if (req_i && (tokens_sat >= TOKEN_COST)) begin
+            grant_q <= 1'b1;
+            tokens  <= tokens_sat - TOKEN_COST;
+        end else begin
+            grant_q <= 1'b0;
+            tokens  <= tokens_sat;
+        end
+    end
+end
+
+endmodule'}
+
+ Iteration rank: 1.0
+
+ Model: gpt-4o-mini
+ Input tokens: 830
+ Output tokens: 294
+Total cost: $0.0003009000
