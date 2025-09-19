@@ -1,0 +1,14 @@
+{
+	"general": {
+        "prompt": "./binary_to_bcd.v",
+        "name": "top_module",
+        "testbench": "./binary_to_bcd_tb.v",
+		"model_family": "ChatGPT",
+		"model_id": "gpt-4o-mini",
+		"num_candidates": 5,
+		"iterations": 5,
+        "outdir": "outputs_binary_to_bcd",
+        "log": "log.txt",
+		"ensemble": false
+    }
+}
