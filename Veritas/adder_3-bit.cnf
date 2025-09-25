@@ -1,0 +1,31 @@
+Here are the CNF equations for a 3-bit adder:
+
+- For the least significant bit sum (S0):
+  \[
+  S0 = (A0 ∨ B0 ∨ !Cin) ∧ (!A0 ∨ !B0 ∨ !Cin) ∧ (A0 ∨ !B0 ∨ Cin) ∧ (!A0 ∨ B0 ∨ Cin)
+  \]
+
+- For the least significant bit carry-out (Cout0):
+  \[
+  Cout0 = (!A0 ∨ !B0) ∧ (!A0 ∨ Cin) ∧ (!B0 ∨ Cin)
+  \]
+
+- For the second bit sum (S1):
+  \[
+  S1 = (A1 ∨ B1 ∨ Cout0) ∧ (!A1 ∨ !B1 ∨ Cout0) ∧ (A1 ∨ !B1 ∨ Cin) ∧ (!A1 ∨ B1 ∨ Cin)
+  \]
+
+- For the second bit carry-out (Cout1):
+  \[
+  Cout1 = (!A1 ∨ !B1) ∧ (!A1 ∨ Cout0) ∧ (!B1 ∨ Cout0)
+  \]
+
+- For the most significant bit sum (S2):
+  \[
+  S2 = (A2 ∨ B2 ∨ Cout1) ∧ (!A2 ∨ !B2 ∨ Cout1) ∧ (A2 ∨ !B2 ∨ Cin) ∧ (!A2 ∨ B2 ∨ Cin)
+  \]
+
+- For the most significant bit carry-out (Cout):
+  \[
+  Cout = (!A2 ∨ !B2) ∧ (!A2 ∨ Cout1) ∧ (!B2 ∨ Cout1)
+  \]
