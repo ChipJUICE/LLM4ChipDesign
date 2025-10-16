@@ -1,0 +1,45 @@
+Here are the CNF equations for a 3-bit adder, using three 1-bit full adders to compute the sums and the final carry-out:
+
+1. **Sum (S0)**:
+   \[
+   S0 = (A0 ∨ !B0 ∨ !Cin) ∧ (!A0 ∨ B0 ∨ !Cin) ∧ (!A0 ∨ !B0 ∨ Cin) ∧ (A0 ∨ B0 ∨ Cin)
+   \]
+
+2. **Carry-out for the first full adder (Cout0)**:
+   \[
+   Cout0 = (A0 ∨ B0 ∨ !Cin) ∧ (A0 ∨ !B0 ∨ Cin) ∧ (!A0 ∨ B0 ∨ Cin) ∧ (!A0 ∨ !B0 ∨ !Cin)
+   \]
+
+3. **Sum (S1)**:
+   \[
+   S1 = (A1 ∨ !B1 ∨ !Cout0) ∧ (!A1 ∨ B1 ∨ !Cout0) ∧ (!A1 ∨ !B1 ∨ Cout0) ∧ (A1 ∨ B1 ∨ Cout0)
+   \]
+
+4. **Carry-out for the second full adder (Cout1)**:
+   \[
+   Cout1 = (A1 ∨ B1 ∨ !Cout0) ∧ (A1 ∨ !B1 ∨ Cout0) ∧ (!A1 ∨ B1 ∨ Cout0) ∧ (!A1 ∨ !B1 ∨ !Cout0)
+   \]
+
+5. **Sum (S2)**:
+   \[
+   S2 = (A2 ∨ !B2 ∨ !Cout1) ∧ (!A2 ∨ B2 ∨ !Cout1) ∧ (!A2 ∨ !B2 ∨ Cout1) ∧ (A2 ∨ B2 ∨ Cout1)
+   \]
+
+6. **Final Carry-out (Cout)**:
+   \[
+   Cout = (A2 ∨ B2 ∨ !Cout1) ∧ (A2 ∨ !B2 ∨ Cout1) ∧ (!A2 ∨ B2 ∨ Cout1) ∧ (!A2 ∨ !B2 ∨ !Cout1)
+   \]
+
+Putting it all together:
+
+- **Sum**:
+  - S0 = (A0 ∨ !B0 ∨ !Cin) ∧ (!A0 ∨ B0 ∨ !Cin) ∧ (!A0 ∨ !B0 ∨ Cin) ∧ (A0 ∨ B0 ∨ Cin)
+  - S1 = (A1 ∨ !B1 ∨ !Cout0) ∧ (!A1 ∨ B1 ∨ !Cout0) ∧ (!A1 ∨ !B1 ∨ Cout0) ∧ (A1 ∨ B1 ∨ Cout0)
+  - S2 = (A2 ∨ !B2 ∨ !Cout1) ∧ (!A2 ∨ B2 ∨ !Cout1) ∧ (!A2 ∨ !B2 ∨ Cout1) ∧ (A2 ∨ B2 ∨ Cout1)
+
+- **Carry-out**:
+  - Cout0 = (A0 ∨ B0 ∨ !Cin) ∧ (A0 ∨ !B0 ∨ Cin) ∧ (!A0 ∨ B0 ∨ Cin) ∧ (!A0 ∨ !B0 ∨ !Cin)
+  - Cout1 = (A1 ∨ B1 ∨ !Cout0) ∧ (A1 ∨ !B1 ∨ Cout0) ∧ (!A1 ∨ B1 ∨ Cout0) ∧ (!A1 ∨ !B1 ∨ !Cout0)
+  - Cout = (A2 ∨ B2 ∨ !Cout1) ∧ (A2 ∨ !B2 ∨ Cout1) ∧ (!A2 ∨ B2 ∨ Cout1) ∧ (!A2 ∨ !B2 ∨ !Cout1) 
+
+This provides the CNF representation for a 3-bit adder based on three 1-bit full adders.
