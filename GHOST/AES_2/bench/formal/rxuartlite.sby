@@ -1,0 +1,23 @@
+[tasks]
+prf
+cvr
+
+[options]
+prf: mode prove
+cvr: mode cover
+multiclock on
+prf: depth  110
+cvr: depth  720
+
+[engines]
+smtbmc yices
+
+[script]
+prf: read -formal -DRXUARTLITE -D PHASE_TWO rxuartlite.v
+cvr: read -formal -DRXUARTLITE -D PHASE_TWO rxuartlite.v
+hierarchy -top rxuartlite -chparam CLOCKS_PER_BAUD 16
+prep -top rxuartlite
+# opt_merge -share_all
+
+[files]
+../../rtl/rxuartlite.v
