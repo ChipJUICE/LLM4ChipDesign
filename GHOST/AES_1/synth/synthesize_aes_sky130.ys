@@ -1,0 +1,30 @@
+# 1. Read your design
+read_verilog ../rtl/aes.v ../rtl/aes_core.v ../rtl/aes_sbox.v ../rtl/aes_key_mem.v ../rtl/aes_inv_sbox.v ../rtl/aes_decipher_block.v ../rtl/aes_encipher_block.v
+
+# 2. Read the SkyWater Liberty (typical-typical corner)
+#read_liberty -lib ./sky130_fd_sc_hd__tt_025C_1v80.lib
+
+# 3. Elaborate hierarchy, set top, and flatten
+hierarchy -check -top aes
+proc; opt
+flatten
+
+# 4. (Optional) Handle memories, latches, etc.
+memory; opt
+techmap; opt
+
+# 5. Map flip-flops to library FF cells
+#dfflibmap -liberty ./sky130_fd_sc_hd__tt_025C_1v80.lib
+
+# 6. Map combinational logic to library cells,
+#    and specify a target clock period for slack info (in ps)
+#abc -liberty ./sky130_fd_sc_hd__tt_025C_1v80.lib -D 1000
+
+# 7. Report area, using per-cell areas from the Liberty file
+#stat -liberty ./sky130_fd_sc_hd__tt_025C_1v80.lib
+
+# 8. (Optional) Write out the mapped netlist
+#write_verilog ./aes_synth_sky130.v
+#write_json    ./aes_synth_sky130.json
+write_verilog ./aes_synth.v
+
