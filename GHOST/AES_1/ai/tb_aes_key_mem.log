@@ -1,0 +1,468 @@
+=== tb_aes_key_mem: start ===
+== KEY_MEM Trojan: pulsing trojan_trigger ==
+265000: KEY_MEM ready
+275000: KEY_MEM ready
+285000: KEY_MEM ready
+295000: KEY_MEM ready
+305000: KEY_MEM ready
+315000: KEY_MEM trojan_covert_out asserted
+315000: KEY_MEM ready
+325000: KEY_MEM ready
+335000: KEY_MEM ready
+345000: KEY_MEM trojan_covert_out asserted
+345000: KEY_MEM ready
+355000: KEY_MEM ready
+365000: KEY_MEM ready
+375000: KEY_MEM ready
+385000: KEY_MEM trojan_covert_out asserted
+385000: KEY_MEM ready
+395000: KEY_MEM trojan_covert_out asserted
+395000: KEY_MEM ready
+405000: KEY_MEM ready
+415000: KEY_MEM trojan_covert_out asserted
+415000: KEY_MEM ready
+425000: KEY_MEM ready
+435000: KEY_MEM ready
+445000: KEY_MEM ready
+455000: KEY_MEM trojan_covert_out asserted
+455000: KEY_MEM ready
+465000: KEY_MEM ready
+475000: KEY_MEM trojan_covert_out asserted
+475000: KEY_MEM ready
+485000: KEY_MEM ready
+495000: KEY_MEM trojan_covert_out asserted
+495000: KEY_MEM ready
+505000: KEY_MEM trojan_covert_out asserted
+505000: KEY_MEM ready
+515000: KEY_MEM ready
+525000: KEY_MEM ready
+535000: KEY_MEM trojan_covert_out asserted
+535000: KEY_MEM ready
+545000: KEY_MEM trojan_covert_out asserted
+545000: KEY_MEM ready
+555000: KEY_MEM trojan_covert_out asserted
+555000: KEY_MEM ready
+565000: KEY_MEM trojan_covert_out asserted
+565000: KEY_MEM ready
+575000: KEY_MEM ready
+585000: KEY_MEM ready
+595000: KEY_MEM ready
+605000: KEY_MEM trojan_covert_out asserted
+605000: KEY_MEM ready
+615000: KEY_MEM ready
+625000: KEY_MEM ready
+635000: KEY_MEM trojan_covert_out asserted
+635000: KEY_MEM ready
+645000: KEY_MEM trojan_covert_out asserted
+645000: KEY_MEM ready
+655000: KEY_MEM ready
+665000: KEY_MEM trojan_covert_out asserted
+665000: KEY_MEM ready
+675000: KEY_MEM ready
+685000: KEY_MEM trojan_covert_out asserted
+685000: KEY_MEM ready
+695000: KEY_MEM ready
+705000: KEY_MEM trojan_covert_out asserted
+705000: KEY_MEM ready
+715000: KEY_MEM trojan_covert_out asserted
+715000: KEY_MEM ready
+725000: KEY_MEM trojan_covert_out asserted
+725000: KEY_MEM ready
+735000: KEY_MEM trojan_covert_out asserted
+735000: KEY_MEM ready
+745000: KEY_MEM ready
+755000: KEY_MEM ready
+765000: KEY_MEM trojan_covert_out asserted
+765000: KEY_MEM ready
+775000: KEY_MEM trojan_covert_out asserted
+775000: KEY_MEM ready
+785000: KEY_MEM ready
+795000: KEY_MEM trojan_covert_out asserted
+795000: KEY_MEM ready
+805000: KEY_MEM trojan_covert_out asserted
+805000: KEY_MEM ready
+815000: KEY_MEM trojan_covert_out asserted
+815000: KEY_MEM ready
+825000: KEY_MEM trojan_covert_out asserted
+825000: KEY_MEM ready
+835000: KEY_MEM ready
+845000: KEY_MEM trojan_covert_out asserted
+845000: KEY_MEM ready
+855000: KEY_MEM trojan_covert_out asserted
+855000: KEY_MEM ready
+865000: KEY_MEM trojan_covert_out asserted
+865000: KEY_MEM ready
+875000: KEY_MEM trojan_covert_out asserted
+875000: KEY_MEM ready
+885000: KEY_MEM ready
+895000: KEY_MEM ready
+905000: KEY_MEM ready
+915000: KEY_MEM ready
+925000: KEY_MEM ready
+935000: KEY_MEM ready
+945000: KEY_MEM ready
+955000: KEY_MEM trojan_covert_out asserted
+955000: KEY_MEM ready
+965000: KEY_MEM ready
+975000: KEY_MEM ready
+985000: KEY_MEM trojan_covert_out asserted
+985000: KEY_MEM ready
+995000: KEY_MEM ready
+1005000: KEY_MEM ready
+1015000: KEY_MEM ready
+1025000: KEY_MEM trojan_covert_out asserted
+1025000: KEY_MEM ready
+1035000: KEY_MEM trojan_covert_out asserted
+1035000: KEY_MEM ready
+1045000: KEY_MEM ready
+1055000: KEY_MEM trojan_covert_out asserted
+1055000: KEY_MEM ready
+1065000: KEY_MEM ready
+1075000: KEY_MEM ready
+1085000: KEY_MEM ready
+1095000: KEY_MEM trojan_covert_out asserted
+1095000: KEY_MEM ready
+1105000: KEY_MEM ready
+1115000: KEY_MEM trojan_covert_out asserted
+1115000: KEY_MEM ready
+1125000: KEY_MEM ready
+1135000: KEY_MEM trojan_covert_out asserted
+1135000: KEY_MEM ready
+1145000: KEY_MEM trojan_covert_out asserted
+1145000: KEY_MEM ready
+1155000: KEY_MEM ready
+1165000: KEY_MEM ready
+1175000: KEY_MEM trojan_covert_out asserted
+1175000: KEY_MEM ready
+1185000: KEY_MEM trojan_covert_out asserted
+1185000: KEY_MEM ready
+1195000: KEY_MEM trojan_covert_out asserted
+1195000: KEY_MEM ready
+1205000: KEY_MEM trojan_covert_out asserted
+1205000: KEY_MEM ready
+1215000: KEY_MEM ready
+1225000: KEY_MEM ready
+1235000: KEY_MEM ready
+1245000: KEY_MEM trojan_covert_out asserted
+1245000: KEY_MEM ready
+1255000: KEY_MEM ready
+1265000: KEY_MEM ready
+1275000: KEY_MEM trojan_covert_out asserted
+1275000: KEY_MEM ready
+1285000: KEY_MEM trojan_covert_out asserted
+1285000: KEY_MEM ready
+1295000: KEY_MEM ready
+1305000: KEY_MEM trojan_covert_out asserted
+1305000: KEY_MEM ready
+1315000: KEY_MEM ready
+1325000: KEY_MEM trojan_covert_out asserted
+1325000: KEY_MEM ready
+1335000: KEY_MEM ready
+1345000: KEY_MEM trojan_covert_out asserted
+1345000: KEY_MEM ready
+1355000: KEY_MEM trojan_covert_out asserted
+1355000: KEY_MEM ready
+1365000: KEY_MEM trojan_covert_out asserted
+1365000: KEY_MEM ready
+1375000: KEY_MEM trojan_covert_out asserted
+1375000: KEY_MEM ready
+1385000: KEY_MEM ready
+1395000: KEY_MEM ready
+1405000: KEY_MEM trojan_covert_out asserted
+1405000: KEY_MEM ready
+1415000: KEY_MEM trojan_covert_out asserted
+1415000: KEY_MEM ready
+1425000: KEY_MEM ready
+1435000: KEY_MEM trojan_covert_out asserted
+1435000: KEY_MEM ready
+1445000: KEY_MEM trojan_covert_out asserted
+1445000: KEY_MEM ready
+1455000: KEY_MEM trojan_covert_out asserted
+1455000: KEY_MEM ready
+1465000: KEY_MEM trojan_covert_out asserted
+1465000: KEY_MEM ready
+1475000: KEY_MEM ready
+1485000: KEY_MEM trojan_covert_out asserted
+1485000: KEY_MEM ready
+1495000: KEY_MEM trojan_covert_out asserted
+1495000: KEY_MEM ready
+1505000: KEY_MEM trojan_covert_out asserted
+1505000: KEY_MEM ready
+1515000: KEY_MEM ready
+1525000: KEY_MEM ready
+1535000: KEY_MEM ready
+1545000: KEY_MEM ready
+1555000: KEY_MEM ready
+1565000: KEY_MEM ready
+1575000: KEY_MEM ready
+1585000: KEY_MEM ready
+1595000: KEY_MEM ready
+1605000: KEY_MEM ready
+1615000: KEY_MEM ready
+1625000: KEY_MEM ready
+1635000: KEY_MEM ready
+1645000: KEY_MEM ready
+1655000: KEY_MEM ready
+1665000: KEY_MEM ready
+1675000: KEY_MEM ready
+1685000: KEY_MEM ready
+1695000: KEY_MEM ready
+1705000: KEY_MEM ready
+1715000: KEY_MEM ready
+1725000: KEY_MEM ready
+1735000: KEY_MEM ready
+1745000: KEY_MEM ready
+1755000: KEY_MEM ready
+1765000: KEY_MEM ready
+1775000: KEY_MEM ready
+1785000: KEY_MEM ready
+1795000: KEY_MEM ready
+1805000: KEY_MEM ready
+1815000: KEY_MEM ready
+1825000: KEY_MEM ready
+1835000: KEY_MEM ready
+1845000: KEY_MEM ready
+1855000: KEY_MEM ready
+1865000: KEY_MEM ready
+1875000: KEY_MEM ready
+1885000: KEY_MEM ready
+1895000: KEY_MEM ready
+1905000: KEY_MEM ready
+1915000: KEY_MEM ready
+1925000: KEY_MEM ready
+1935000: KEY_MEM ready
+1945000: KEY_MEM ready
+1955000: KEY_MEM ready
+1965000: KEY_MEM ready
+1975000: KEY_MEM ready
+1985000: KEY_MEM ready
+1995000: KEY_MEM ready
+2005000: KEY_MEM ready
+2015000: KEY_MEM ready
+2025000: KEY_MEM ready
+2035000: KEY_MEM ready
+2045000: KEY_MEM ready
+2055000: KEY_MEM ready
+2065000: KEY_MEM ready
+2075000: KEY_MEM ready
+2085000: KEY_MEM ready
+2095000: KEY_MEM ready
+2105000: KEY_MEM ready
+2115000: KEY_MEM ready
+2125000: KEY_MEM ready
+2135000: KEY_MEM ready
+2145000: KEY_MEM ready
+2155000: KEY_MEM ready
+2165000: KEY_MEM ready
+2175000: KEY_MEM ready
+2185000: KEY_MEM ready
+2195000: KEY_MEM ready
+2205000: KEY_MEM ready
+2215000: KEY_MEM ready
+2225000: KEY_MEM ready
+2235000: KEY_MEM ready
+2245000: KEY_MEM ready
+2255000: KEY_MEM ready
+2265000: KEY_MEM ready
+2275000: KEY_MEM ready
+2285000: KEY_MEM ready
+2295000: KEY_MEM ready
+2305000: KEY_MEM ready
+2315000: KEY_MEM ready
+2325000: KEY_MEM ready
+2335000: KEY_MEM ready
+2345000: KEY_MEM ready
+2355000: KEY_MEM ready
+2365000: KEY_MEM ready
+2375000: KEY_MEM ready
+2385000: KEY_MEM ready
+2395000: KEY_MEM ready
+2405000: KEY_MEM ready
+2415000: KEY_MEM ready
+2425000: KEY_MEM ready
+2435000: KEY_MEM ready
+2445000: KEY_MEM ready
+2455000: KEY_MEM ready
+2465000: KEY_MEM ready
+2475000: KEY_MEM ready
+2485000: KEY_MEM ready
+2495000: KEY_MEM ready
+2505000: KEY_MEM ready
+2515000: KEY_MEM ready
+2525000: KEY_MEM ready
+2535000: KEY_MEM ready
+2545000: KEY_MEM ready
+2555000: KEY_MEM ready
+2565000: KEY_MEM ready
+2575000: KEY_MEM ready
+2585000: KEY_MEM ready
+2595000: KEY_MEM ready
+2605000: KEY_MEM ready
+2615000: KEY_MEM ready
+2625000: KEY_MEM ready
+2635000: KEY_MEM ready
+2645000: KEY_MEM ready
+2655000: KEY_MEM ready
+2665000: KEY_MEM ready
+2675000: KEY_MEM ready
+2685000: KEY_MEM ready
+2695000: KEY_MEM ready
+2705000: KEY_MEM ready
+2715000: KEY_MEM ready
+2725000: KEY_MEM ready
+2735000: KEY_MEM ready
+2745000: KEY_MEM ready
+2755000: KEY_MEM ready
+2765000: KEY_MEM ready
+2775000: KEY_MEM ready
+2785000: KEY_MEM ready
+2795000: KEY_MEM ready
+2805000: KEY_MEM ready
+2815000: KEY_MEM ready
+2825000: KEY_MEM ready
+2835000: KEY_MEM ready
+2845000: KEY_MEM ready
+2855000: KEY_MEM ready
+2865000: KEY_MEM ready
+2875000: KEY_MEM ready
+2885000: KEY_MEM ready
+2895000: KEY_MEM ready
+2905000: KEY_MEM ready
+2915000: KEY_MEM ready
+2925000: KEY_MEM ready
+2935000: KEY_MEM ready
+2945000: KEY_MEM ready
+2955000: KEY_MEM ready
+2965000: KEY_MEM ready
+2975000: KEY_MEM ready
+2985000: KEY_MEM ready
+2995000: KEY_MEM ready
+3005000: KEY_MEM ready
+3015000: KEY_MEM ready
+3025000: KEY_MEM ready
+3035000: KEY_MEM ready
+3045000: KEY_MEM ready
+3055000: KEY_MEM ready
+3065000: KEY_MEM ready
+3075000: KEY_MEM ready
+3085000: KEY_MEM ready
+3095000: KEY_MEM ready
+3105000: KEY_MEM ready
+3115000: KEY_MEM ready
+3125000: KEY_MEM ready
+3135000: KEY_MEM ready
+3145000: KEY_MEM ready
+3155000: KEY_MEM ready
+3165000: KEY_MEM ready
+3175000: KEY_MEM ready
+3185000: KEY_MEM ready
+3195000: KEY_MEM ready
+3205000: KEY_MEM ready
+3215000: KEY_MEM ready
+3225000: KEY_MEM ready
+3235000: KEY_MEM ready
+3245000: KEY_MEM ready
+3255000: KEY_MEM ready
+3265000: KEY_MEM ready
+3275000: KEY_MEM ready
+3285000: KEY_MEM ready
+3295000: KEY_MEM ready
+3305000: KEY_MEM ready
+3315000: KEY_MEM ready
+3325000: KEY_MEM ready
+3335000: KEY_MEM ready
+3345000: KEY_MEM ready
+3355000: KEY_MEM ready
+3365000: KEY_MEM ready
+3375000: KEY_MEM ready
+3385000: KEY_MEM ready
+3395000: KEY_MEM ready
+3405000: KEY_MEM ready
+3415000: KEY_MEM ready
+3425000: KEY_MEM ready
+3435000: KEY_MEM ready
+3445000: KEY_MEM ready
+3455000: KEY_MEM ready
+3465000: KEY_MEM ready
+3475000: KEY_MEM ready
+3485000: KEY_MEM ready
+3495000: KEY_MEM ready
+3505000: KEY_MEM ready
+3515000: KEY_MEM ready
+3525000: KEY_MEM ready
+3535000: KEY_MEM ready
+3545000: KEY_MEM ready
+3555000: KEY_MEM ready
+3565000: KEY_MEM ready
+3575000: KEY_MEM ready
+3585000: KEY_MEM ready
+3595000: KEY_MEM ready
+3605000: KEY_MEM ready
+3615000: KEY_MEM ready
+3625000: KEY_MEM ready
+3635000: KEY_MEM ready
+3645000: KEY_MEM ready
+3655000: KEY_MEM ready
+3665000: KEY_MEM ready
+3675000: KEY_MEM ready
+3685000: KEY_MEM ready
+3695000: KEY_MEM ready
+3705000: KEY_MEM ready
+3715000: KEY_MEM ready
+3725000: KEY_MEM ready
+3735000: KEY_MEM ready
+3745000: KEY_MEM ready
+3755000: KEY_MEM ready
+3765000: KEY_MEM ready
+3775000: KEY_MEM ready
+3785000: KEY_MEM ready
+3795000: KEY_MEM ready
+3805000: KEY_MEM ready
+3815000: KEY_MEM ready
+3825000: KEY_MEM ready
+3835000: KEY_MEM ready
+3845000: KEY_MEM ready
+3855000: KEY_MEM ready
+3865000: KEY_MEM ready
+3875000: KEY_MEM ready
+3885000: KEY_MEM ready
+3895000: KEY_MEM ready
+3905000: KEY_MEM ready
+3915000: KEY_MEM ready
+3925000: KEY_MEM ready
+3935000: KEY_MEM ready
+3945000: KEY_MEM ready
+3955000: KEY_MEM ready
+3965000: KEY_MEM ready
+3975000: KEY_MEM ready
+3985000: KEY_MEM ready
+3995000: KEY_MEM ready
+4005000: KEY_MEM ready
+4015000: KEY_MEM ready
+4025000: KEY_MEM ready
+4035000: KEY_MEM ready
+4045000: KEY_MEM ready
+4055000: KEY_MEM ready
+4065000: KEY_MEM ready
+4075000: KEY_MEM ready
+4085000: KEY_MEM ready
+4095000: KEY_MEM ready
+4105000: KEY_MEM ready
+4115000: KEY_MEM ready
+4125000: KEY_MEM ready
+4135000: KEY_MEM ready
+4145000: KEY_MEM ready
+4155000: KEY_MEM ready
+4165000: KEY_MEM ready
+4175000: KEY_MEM ready
+4185000: KEY_MEM ready
+4195000: KEY_MEM ready
+4205000: KEY_MEM ready
+4215000: KEY_MEM ready
+=== tb_aes_key_mem: finish ===
+4225000: KEY_MEM ready
+4235000: KEY_MEM ready
+4245000: KEY_MEM ready
+4255000: KEY_MEM ready
+4265000: KEY_MEM ready
+4275000: KEY_MEM ready

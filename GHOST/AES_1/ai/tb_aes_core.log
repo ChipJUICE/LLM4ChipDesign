@@ -1,0 +1,5 @@
+=== tb_aes_core: start ===
+== AES_CORE Trojan trigger sequence ==
+675000: AES_CORE RESULT_VALID, result[127:120]=0xxx
+1195000: AES_CORE RESULT_VALID, result[127:120]=0xxx
+=== tb_aes_core: finish ===

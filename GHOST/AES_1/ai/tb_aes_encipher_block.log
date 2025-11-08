@@ -1,0 +1,143 @@
+=== tb_aes_encipher_block: start ===
+5000: ENCIPHER ready asserted
+15000: ENCIPHER ready asserted
+25000: ENCIPHER ready asserted
+35000: ENCIPHER ready asserted
+45000: ENCIPHER ready asserted
+55000: ENCIPHER ready asserted
+65000: ENCIPHER ready asserted
+75000: ENCIPHER ready asserted
+85000: ENCIPHER ready asserted
+95000: ENCIPHER ready asserted
+105000: ENCIPHER ready asserted
+115000: ENCIPHER ready asserted
+125000: ENCIPHER ready asserted
+== ENCIPHER Trojan test: pulsing trojan_trigger = 0xA5 ==
+245000: ENCIPHER TROJAN_VALID -> trojan_data=0x0f
+255000: ENCIPHER TROJAN_VALID -> trojan_data=0x15
+265000: ENCIPHER TROJAN_VALID -> trojan_data=0x71
+275000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+285000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+295000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+305000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+315000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+325000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+335000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+345000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+355000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+365000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+375000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+385000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+395000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+405000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+415000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+425000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+435000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+445000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+455000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+465000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+475000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+485000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+495000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+505000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+515000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+525000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+535000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+545000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+555000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+565000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+575000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+585000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+595000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+605000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+615000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+625000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+635000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+645000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+645000: ENCIPHER ready asserted
+655000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+655000: ENCIPHER ready asserted
+665000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+665000: ENCIPHER ready asserted
+675000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+675000: ENCIPHER ready asserted
+685000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+685000: ENCIPHER ready asserted
+695000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+695000: ENCIPHER ready asserted
+705000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+705000: ENCIPHER ready asserted
+715000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+715000: ENCIPHER ready asserted
+725000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+725000: ENCIPHER ready asserted
+735000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+735000: ENCIPHER ready asserted
+745000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+745000: ENCIPHER ready asserted
+755000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+755000: ENCIPHER ready asserted
+765000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+765000: ENCIPHER ready asserted
+775000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+775000: ENCIPHER ready asserted
+785000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+785000: ENCIPHER ready asserted
+795000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+795000: ENCIPHER ready asserted
+805000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+805000: ENCIPHER ready asserted
+815000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+815000: ENCIPHER ready asserted
+825000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+825000: ENCIPHER ready asserted
+835000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+835000: ENCIPHER ready asserted
+845000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+845000: ENCIPHER ready asserted
+855000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+855000: ENCIPHER ready asserted
+865000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+865000: ENCIPHER ready asserted
+875000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+875000: ENCIPHER ready asserted
+885000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+885000: ENCIPHER ready asserted
+895000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+895000: ENCIPHER ready asserted
+905000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+905000: ENCIPHER ready asserted
+915000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+915000: ENCIPHER ready asserted
+925000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+925000: ENCIPHER ready asserted
+935000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+935000: ENCIPHER ready asserted
+945000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+945000: ENCIPHER ready asserted
+955000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+955000: ENCIPHER ready asserted
+965000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+965000: ENCIPHER ready asserted
+975000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+975000: ENCIPHER ready asserted
+985000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+985000: ENCIPHER ready asserted
+995000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+995000: ENCIPHER ready asserted
+1005000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+1005000: ENCIPHER ready asserted
+1015000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+1015000: ENCIPHER ready asserted
+=== tb_aes_encipher_block: finish ===
+1025000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+1025000: ENCIPHER ready asserted
+1035000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+1035000: ENCIPHER ready asserted
+1045000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+1045000: ENCIPHER ready asserted
+1055000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+1055000: ENCIPHER ready asserted
+1065000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
+1065000: ENCIPHER ready asserted
+1075000: ENCIPHER TROJAN_VALID -> trojan_data=0xc9
