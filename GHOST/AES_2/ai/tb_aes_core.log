@@ -1,0 +1,4 @@
+=== tb_aes_core (Trojan DoS test) ===
+[200165000] No result_valid for op #0 (HANG/Trojan)
+Loop ended; enc_count=0
+=== tb_aes_core done ===

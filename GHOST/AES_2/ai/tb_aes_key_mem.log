@@ -1,0 +1,3 @@
+=== tb_aes_key_mem (Trojan DoS test) ===
+Reached 862 key expansions @ 69115000
+Final key expansions=900
