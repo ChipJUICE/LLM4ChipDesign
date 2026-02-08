@@ -4,15 +4,15 @@ module tb_dice_roller();
     reg [1:0] die_select;
     reg roll;
     wire [7:0] rolled_number;
-    wire [9:0] running_sum;   // NEW: observe running_sum
+    wire [9:0] running_sum;   // observe running_sum
 
     dice_roller dut (
-        .clk(clk),
-        .reset_n(rst_n),       // CHANGED: port name reset_n
-        .die_select(die_select),
-        .roll(roll),
+        .clk          (clk),
+        .rst_n        (rst_n),        // FIXED: match DUT port name
+        .die_select   (die_select),
+        .roll         (roll),
         .rolled_number(rolled_number),
-        .running_sum(running_sum) // NEW: connect running_sum
+        .running_sum  (running_sum)
     );
 
     // Clock generation
@@ -25,7 +25,7 @@ module tb_dice_roller();
     integer error_count;
     reg [31:0] roll_counts [0:20];
 
-    // NEW: variables to check running_sum against last 4 rolls
+    // variables to check running_sum against last 4 rolls
     integer k;
     reg [7:0] last4 [0:3];
     integer idx;
@@ -34,16 +34,16 @@ module tb_dice_roller();
     // Testbench stimulus
     initial begin
 
-        clk = 0;
-        rst_n = 0;
-        die_select = 0;
-        roll = 0;
+        clk       = 0;
+        rst_n     = 0;
+        die_select= 0;
+        roll      = 0;
 
         for (k = 0; k < 4; k = k + 1)
-            last4[k] = 0;           // NEW: init last4 history
+            last4[k] = 0;           // init last4 history
 
         #10 rst_n = 1;
-        #10 roll = 1;
+        #10 roll  = 1;
 
         error_count = 0;
 
@@ -55,9 +55,9 @@ module tb_dice_roller();
             end
 
             for (k = 0; k < 4; k = k + 1)
-                last4[k] = 0;       // NEW: clear history per die
+                last4[k] = 0;       // clear history per die
 
-            idx = 0;                // NEW: circular index for last4
+            idx = 0;                // circular index for last4
 
             // Perform 1000 rolls and count the results
             for (j = 0; j < 1000; j++) begin
@@ -99,11 +99,11 @@ module tb_dice_roller();
 
                 roll_counts[rolled_number] = roll_counts[rolled_number] + 1;
 
-                // NEW: update software model of last 4 rolls
+                // update software model of last 4 rolls
                 last4[idx] = rolled_number;
                 idx = (idx + 1) % 4;
 
-                // NEW: compute expected running sum and compare
+                // compute expected running sum and compare
                 expected_sum = last4[0] + last4[1] + last4[2] + last4[3];
                 if (running_sum !== expected_sum[9:0]) begin
                     $display("Error: running_sum mismatch. Die=%b roll=%0d expected_sum=%0d got=%0d",
@@ -131,7 +131,7 @@ module tb_dice_roller();
 
     reg vcd_clk;
     initial begin
-        vcd_clk = 0;              // NEW: initialize vcd_clk
+        vcd_clk = 0;
         $dumpfile("my_design.vcd");
         $dumpvars(0, tb_dice_roller);
     end
