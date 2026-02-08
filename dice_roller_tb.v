@@ -8,7 +8,7 @@ module tb_dice_roller();
 
     dice_roller dut (
         .clk          (clk),
-        .rst_n        (rst_n),        // FIXED: match DUT port name
+        .rst_n        (rst_n),
         .die_select   (die_select),
         .roll         (roll),
         .rolled_number(rolled_number),
@@ -34,13 +34,16 @@ module tb_dice_roller();
     // Testbench stimulus
     initial begin
 
-        clk       = 0;
-        rst_n     = 0;
-        die_select= 0;
-        roll      = 0;
+        clk        = 0;
+        rst_n      = 0;
+        die_select = 0;
+        roll       = 0;
 
         for (k = 0; k < 4; k = k + 1)
-            last4[k] = 0;           // init last4 history
+            last4[k] = 0;
+
+        expected_sum = 0;
+        idx          = 0;
 
         #10 rst_n = 1;
         #10 roll  = 1;
@@ -55,9 +58,10 @@ module tb_dice_roller();
             end
 
             for (k = 0; k < 4; k = k + 1)
-                last4[k] = 0;       // clear history per die
+                last4[k] = 0;
 
-            idx = 0;                // circular index for last4
+            expected_sum = 0;
+            idx          = 0;
 
             // Perform 1000 rolls and count the results
             for (j = 0; j < 1000; j++) begin
@@ -99,12 +103,13 @@ module tb_dice_roller();
 
                 roll_counts[rolled_number] = roll_counts[rolled_number] + 1;
 
-                // update software model of last 4 rolls
-                last4[idx] = rolled_number;
-                idx = (idx + 1) % 4;
+                // Update expected_sum and history in the same order as DUT:
+                // running_sum <= running_sum - oldest + new;
+                expected_sum = expected_sum - last4[idx] + rolled_number;
+                last4[idx]   = rolled_number;
+                idx          = (idx + 1) % 4;
 
-                // compute expected running sum and compare
-                expected_sum = last4[0] + last4[1] + last4[2] + last4[3];
+                // Compare with DUT running_sum
                 if (running_sum !== expected_sum[9:0]) begin
                     $display("Error: running_sum mismatch. Die=%b roll=%0d expected_sum=%0d got=%0d",
                              die_select, rolled_number, expected_sum, running_sum);
